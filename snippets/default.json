@@ -1,0 +1,35 @@
+{
+  "vue-script-setup": {
+    "scope": "vue",
+    "prefix": "<sc",
+    "body": [
+      "<script setup ${1| ,lang=\"ts\",lang=\"jsx\",lang=\"tsx\"|}>",
+      "$3",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>",
+      "  </div>",
+      "</template>"
+    ]
+  },
+  "vue-style": {
+    "scope": "vue",
+    "prefix": "<st",
+    "body": ["<style scoped>", "${1}", "</style>"]
+  },
+  "html-doc": {
+    "prefix": "htmldoc",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html>",
+      "  <head>",
+      "    <meta charset=\"UTF-8\" />",
+      "    <title>title</title>",
+      "  </head>",
+      "  <body>",
+      "  </body>",
+      "</html>"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "ymzhao-code-snippets",
+  "displayName": "ymzhao-code-snippets",
+  "description": "ymzhao code snippets",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/default.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/default.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/default.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/default.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/default.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/default.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
+      }
+    ]
+  }
+}

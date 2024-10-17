@@ -1,0 +1,14 @@
+{
+  "markdown-api-table": {
+    "prefix": "table",
+    "body": ["| -$1 | - |", "| --- | --- |", "| - | - |", ""]
+  },
+  "block-details": {
+    "prefix": "detail",
+    "body": ["::: details", "", "$1", "", ":::", ""]
+  },
+  "code-group": {
+    "prefix": "codeg",
+    "body": ["::: code-group", "", "```$1", "", "```", "", "```", "", "```", "", ":::", ""]
+  }
+}

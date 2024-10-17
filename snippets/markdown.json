@@ -1,14 +1,35 @@
 {
   "markdown-api-table": {
     "prefix": "table",
-    "body": ["| -$1 | - |", "| --- | --- |", "| - | - |", ""]
+    "body": ["| -$1 | - |", "| --- | --- |", "| - | - |\n"],
+    "description": "Create a markdown table"
   },
-  "block-details": {
-    "prefix": "detail",
-    "body": ["::: details", "", "$1", "", ":::", ""]
+  "block-or-container(shiki)": {
+    "prefix": "block",
+    "body": ["::: ${1|info,tip,warning,danger,details|}\n\n$2\n\n:::\n"],
+    "description": "(Support by shiki) Create a markdown block or container"
   },
-  "code-group": {
+  "code-group(shiki)": {
     "prefix": "codeg",
-    "body": ["::: code-group", "", "```$1", "", "```", "", "```", "", "```", "", ":::", ""]
+    "body": ["::: code-group\n\n```js [file1.js]\n\n```\n\n```js [file2.js]\n\n```\n\n:::\n"],
+    "description": "(Support by shiki) Create a markdown code group"
+  },
+  "mark-code-line(shiki)": {
+    "prefix": "!code",
+    "body": ["// [!code ${1|highlight,focus,++,--,warning,error|}]"],
+    "description": "(Support by shiki) Mark a code line"
+  },
+  "vitepress-yaml-formatter": {
+    "prefix": "formatter",
+    "body": [
+      "---",
+      "description: $1",
+      "head:",
+      "\t-\t- meta",
+      "\t\t- name: keywords",
+      "\t\t\tcontent: $2",
+      "---\n"
+    ],
+    "description": "Create a YAML frontmatter in VitePress, with description and keywords"
   }
 }

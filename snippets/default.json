@@ -1,35 +1,100 @@
 {
   "vue-script-setup": {
-    "scope": "vue",
     "prefix": "<sc",
     "body": [
-      "<script setup ${1| ,lang=\"ts\",lang=\"jsx\",lang=\"tsx\"|}>",
-      "$3",
-      "</script>",
-      "",
+      "<script setup ${1| ,lang=\"ts\",lang=\"jsx\",lang=\"tsx\"|}>\n${2}\n</script>\n",
       "<template>",
-      "  <div>",
-      "  </div>",
+      "\t<div>",
+      "\t</div>",
       "</template>"
-    ]
+    ],
+    "description": "Create a <script setup> template"
+  },
+  "vue-define-component": {
+    "prefix": "defcomp",
+    "body": [
+      "// $1import { defineComponent } from 'vue'",
+      "const VueComp = defineComponent({",
+      "\tname: 'VueComp',",
+      "\tprops: [],",
+      "\tdata() {",
+      "\t\treturn {}",
+      "\t},",
+      "\tsetup() {",
+      "\t\treturn () => {",
+      "\t\t\treturn <div></div>",
+      "\t\t}",
+      "\t},",
+      "})\n"
+    ],
+    "description": "Define a vue component."
+  },
+  "vue-define-component-with-function-syntax": {
+    "prefix": "defcompfn",
+    "body": [
+      "// $1import { defineComponent } from 'vue'",
+      "const VueComp = defineComponent(",
+      "\t({ props }) => {",
+      "\t\treturn () => {",
+      "\t\t\treturn <div></div>",
+      "\t\t}",
+      "\t},",
+      "\t{ name: 'VueComp', props: [] }",
+      ")\n"
+    ],
+    "description": "Define a vue component with function syntax"
+  },
+  "vue-jsx-component": {
+    "prefix": "jsxcomp",
+    "body": [
+      "const JsxComp = ({ props }) => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1}",
+      "\t\t</div>",
+      "\t)",
+      "}\n"
+    ],
+    "description": "Create a vue component in jsx format"
   },
   "vue-style": {
-    "scope": "vue",
     "prefix": "<st",
-    "body": ["<style scoped>", "${1}", "</style>"]
+    "body": ["<style scoped>\n${1}\n</style>"],
+    "description": "Create a vue <style scoped> tag"
   },
-  "html-doc": {
-    "prefix": "htmldoc",
+  "html-template": {
+    "prefix": "<htm",
     "body": [
       "<!DOCTYPE html>",
       "<html>",
-      "  <head>",
-      "    <meta charset=\"UTF-8\" />",
-      "    <title>title</title>",
-      "  </head>",
-      "  <body>",
-      "  </body>",
+      "\t<head>",
+      "\t\t<meta charset=\"UTF-8\" />",
+      "\t\t<title>title</title>",
+      "\t</head>",
+      "\t<body>",
+      "\t</body>",
       "</html>"
-    ]
+    ],
+    "description": "Create a html template"
+  },
+  "function": {
+    "prefix": "fn",
+    "body": ["function ${1:fn}(${2:params}) {\n\t${3}\n}"],
+    "description": "Create a function"
+  },
+  "arrow-function": {
+    "prefix": "afn",
+    "body": ["const ${1:fn} = (${2:params}) => {\n\t${3}\n}"],
+    "description": "Create an arrow function"
+  },
+  "ignore-prettier-comment": {
+    "prefix": "prettier-ignore",
+    "body": "// prettier-ignore$0",
+    "description": "Ignore prettier comment"
+  },
+  "eslint-disable-comment": {
+    "prefix": "eslint-disable",
+    "body": "/* eslint-disable$0 */",
+    "description": "Eslint disable comment"
   }
 }

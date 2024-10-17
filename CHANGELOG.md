@@ -1,9 +1,7 @@
 # Change Log
 
-All notable changes to the "ymzhao-code-snippets" extension will be documented in this file.
+## [0.0.1] - 2024-10-17
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Added
 
-## [Unreleased]
-
-- Initial release
+- Init project and add several snippets.

@@ -2,7 +2,13 @@
   "name": "ymzhao-code-snippets",
   "displayName": "ymzhao-code-snippets",
   "description": "ymzhao code snippets",
+  "publisher": "ymzhao",
   "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zymbth/vscode-snippets"
+  },
   "engines": {
     "vscode": "^1.94.0"
   },

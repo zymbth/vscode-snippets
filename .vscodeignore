@@ -3,7 +3,6 @@
 .gitignore
 vsc-extension-quickstart.md
 CHANGELOG.md
-LICENSE
 README.md
 *-lock.*
 dist*

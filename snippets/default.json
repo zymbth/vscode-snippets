@@ -10,8 +10,8 @@
     ],
     "description": "Create a <script setup> template"
   },
-  "vue-define-component": {
-    "prefix": "defcomp",
+  "define-vue-component": {
+    "prefix": "vuecomp",
     "body": [
       "// $1import { defineComponent } from 'vue'",
       "const VueComp = defineComponent({",
@@ -29,8 +29,8 @@
     ],
     "description": "Define a vue component."
   },
-  "vue-define-component-with-function-syntax": {
-    "prefix": "defcompfn",
+  "define-vue-component-with-function-syntax": {
+    "prefix": "vuecompfn",
     "body": [
       "// $1import { defineComponent } from 'vue'",
       "const VueComp = defineComponent(",
@@ -44,8 +44,8 @@
     ],
     "description": "Define a vue component with function syntax"
   },
-  "vue-jsx-component": {
-    "prefix": "jsxcomp",
+  "define-vue-jsx-component": {
+    "prefix": "vuecompjsx",
     "body": [
       "const JsxComp = ({ props }) => {",
       "\treturn (",
@@ -61,6 +61,31 @@
     "prefix": "<st",
     "body": ["<style scoped>\n${1}\n</style>"],
     "description": "Create a vue <style scoped> tag"
+  },
+  "vue-writable-computed": {
+    "prefix": "computed",
+    "body": [
+      "const originalVal$1 = ref(1)",
+      "const computedVal = computed({",
+      "\tget: () => originalVal.value,",
+      "\tset: val => {",
+      "\t\toriginalVal.value = val",
+      "\t}",
+      "})\n"
+    ],
+    "description": "Create a vue writable computed value"
+  },
+  "vue-writable-model-value": {
+    "prefix": "computed",
+    "body": [
+      "// $1const props = defineProps(['modelValue'])",
+      "// const emit = defineEmits(['update:modelValue'])",
+      "const computedVal = computed({",
+      "\tget: () => props.modelValue,",
+      "\tset: val => emit('update:modelValue', val)",
+      "})\n"
+    ],
+    "description": "Create a writable computed value for vue's modelValue prop"
   },
   "html-template": {
     "prefix": "<htm",

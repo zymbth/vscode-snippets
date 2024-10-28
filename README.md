@@ -20,18 +20,20 @@ Below is a list of all available snippets and the triggers of each one.
 
 For html, javascript, typescript, jsx, tsx, vue:
 
-|         Trigger | Content                                     |
-| --------------: | ------------------------------------------- |
-|             <sc | Create a \<script setup\> template          |
-|         defcomp | Define a vue component                      |
-|       defcompfn | Define a vue component with function syntax |
-|         jsxcomp | Create a vue component in jsx format        |
-|             <st | Create a vue \<style scoped\> tag           |
-|            <htm | Create a html template                      |
-|              fn | Create a function                           |
-|             afn | Create an arrowfunction                     |
-| prettier-ignore | Ignore prettier comment                     |
-|  eslint-disable | Eslint disable comment                      |
+|         Trigger | Content                                                    |
+| --------------: | ---------------------------------------------------------- |
+|             <sc | Create a \<script setup\> template                         |
+|         vuecomp | Define a vue component                                     |
+|       vuecompfn | Define a vue component with function syntax                |
+|      vuecompjsx | Create a vue component in jsx format                       |
+|             <st | Create a vue \<style scoped\> tag                          |
+|        computed | Create a vue writable computed value                       |
+|        computed | Create a writable computed value for vue's modelValue prop |
+|            <htm | Create a html template                                     |
+|              fn | Create a function                                          |
+|             afn | Create an arrowfunction                                    |
+| prettier-ignore | Ignore prettier comment                                    |
+|  eslint-disable | Eslint disable comment                                     |
 
 ### markdown
 
@@ -41,6 +43,9 @@ For markdown:
 | --------: | --------------------------------------------------------------------- |
 |     table | Create a markdown table                                               |
 |     block | (Support by shiki) Create a markdown block or container               |
+| codeblock | Create a markdown code block                                          |
 |     codeg | (Support by shiki) Create a markdown code group                       |
-|     !code | (Support by shiki) Mark a code line                                   |
+|    codehl | (Support by shiki) Mark a code line                                   |
 | formatter | Create a YAML frontmatter in VitePress, with description and keywords |
+|  dirctory | Create a directory structure                                          |
+|  dirctory | Create a more loose directory structure                               |

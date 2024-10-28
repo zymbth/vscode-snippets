@@ -9,13 +9,18 @@
     "body": ["::: ${1|info,tip,warning,danger,details|}\n\n$2\n\n:::\n"],
     "description": "(Support by shiki) Create a markdown block or container"
   },
+  "code-block": {
+    "prefix": "codeblock",
+    "body": ["```${1|js,ts,jsx,tsx,css,html,json,vue,text,md,sh,yml,yaml|}\n```\n"],
+    "description": "Create a markdown code block"
+  },
   "code-group(shiki)": {
     "prefix": "codeg",
     "body": ["::: code-group\n\n```js [file1.js]\n\n```\n\n```js [file2.js]\n\n```\n\n:::\n"],
     "description": "(Support by shiki) Create a markdown code group"
   },
   "mark-code-line(shiki)": {
-    "prefix": "!code",
+    "prefix": "codehl",
     "body": ["// [!code ${1|highlight,focus,++,--,warning,error|}]"],
     "description": "(Support by shiki) Mark a code line"
   },
@@ -31,5 +36,31 @@
       "---\n"
     ],
     "description": "Create a YAML frontmatter in VitePress, with description and keywords"
+  },
+  "directory-structure-block": {
+    "prefix": "dirctory",
+    "body": [
+      "```text",
+      "├ dir1",
+      "├ dir2",
+      "│ ├ dir2-1",
+      "│ └ dir2-2",
+      "└ dir3",
+      "```\n"
+    ],
+    "description": "Create a directory structure"
+  },
+  "directory-structure-block(loose)": {
+    "prefix": "dirctory",
+    "body": [
+      "```text",
+      "├── dir1",
+      "├── dir2",
+      "│   ├── dir2-1",
+      "│   └── dir2-2",
+      "└── dir3",
+      "```\n"
+    ],
+    "description": "Create a more loose directory structure"
   }
 }

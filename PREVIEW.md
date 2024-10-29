@@ -7,7 +7,7 @@
 `<sc`: Create a &lt;script setup&gt; template
 
 ```vue
-<script setup >
+<script setup  >
 
 </script>
 
@@ -138,7 +138,7 @@ const computedVal = computed({
 `fn`: Create a function
 
 ```vue
-function ${1:fn}(${2:params}) {
+function fn(params) {
   
 }
 ```
@@ -149,7 +149,7 @@ function ${1:fn}(${2:params}) {
 `afn`: Create an arrow function
 
 ```vue
-const ${1:fn} = (${2:params}) => {
+const fn = (params) => {
   
 }
 ```
@@ -192,7 +192,7 @@ const ${1:fn} = (${2:params}) => {
 `block`: (Support by shiki) Create a markdown block or container
 
 ```text
-::: 
+::: info
 
 
 
@@ -206,7 +206,7 @@ const ${1:fn} = (${2:params}) => {
 `codeblock`: Create a markdown code block
 
 <pre><code>
-```
+```js
 ```
 
 </code></pre>
@@ -237,7 +237,7 @@ const ${1:fn} = (${2:params}) => {
 `codehl`: (Support by shiki) Mark a code line
 
 ```text
-// [!code ]
+// [!code highlight]
 ```
 
 

@@ -27,7 +27,8 @@
   ],
   "scripts": {
     "release": "bumpp -c \"release: v%s\" package.json",
-    "publish:vs-marketplace": "vsce publish --no-dependencies"
+    "publish:vs-marketplace": "vsce publish --no-dependencies",
+    "preview": "node script-preview.mjs"
   },
   "contributes": {
     "snippets": [
